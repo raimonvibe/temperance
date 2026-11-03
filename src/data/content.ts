@@ -109,7 +109,7 @@ export const disciplines: Discipline[] = [
     numeral: "V",
     title: "Task initiation",
     icon: Hammer,
-    notes: ["Remember that you only work for the Lord Jesus Christ, whom you are serving."],
+    notes: ["Remember that you only work for the Lord Jesus Christ, Whom you are serving."],
     verses: [
       {
         ref: "Proverbs 6:6–8",
@@ -158,7 +158,7 @@ export const disciplines: Discipline[] = [
     title: "Emotional control",
     icon: HeartHandshake,
     notes: ["Release our emotional weight to Jesus rather than carrying it alone or acting it out."],
-    verses: [{ ref: "1 Peter 5:7", text: "Cast all your anxiety on him because he cares for you." }],
+    verses: [{ ref: "1 Peter 5:7", text: "Cast all your anxiety on Him because He cares for you." }],
   },
 ];
 
