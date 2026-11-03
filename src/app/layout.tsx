@@ -17,10 +17,26 @@ const body = EB_Garamond({
 });
 const caps = Cinzel({ subsets: ["latin"], weight: ["500", "600"], variable: "--font-caps" });
 
+const description =
+  "and in knowledge, self-control; and in self-control, perseverance; and in perseverance, godliness. — 2 Peter 1:6";
+
+// Share images need an absolute URL. Set NEXT_PUBLIC_SITE_URL to the live domain;
+// on Vercel the production domain is picked up automatically.
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
+// Icons, favicon and share images come from the file conventions in this folder
+// (favicon.ico, icon.png, apple-icon.png, opengraph-image.jpg, twitter-image.jpg).
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Temperance",
-  description:
-    "and in knowledge, self-control; and in self-control, perseverance; and in perseverance, godliness. — 2 Peter 1:6",
+  description,
+  appleWebApp: { title: "Temperance", capable: true, statusBarStyle: "default" },
+  openGraph: { type: "website", siteName: "Temperance", title: "Temperance", description, url: "/" },
+  twitter: { card: "summary_large_image", title: "Temperance", description },
 };
 
 export const viewport: Viewport = {
